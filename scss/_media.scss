@@ -1,0 +1,141 @@
+/* Portrait */
+@media (max-width: 1024px) {
+  #header-home {
+    padding: 0.5rem 0;
+  }
+
+  #main-nav {
+    flex-direction: column;
+
+    .main-logo {
+      margin-bottom: 1rem;
+    }
+  }
+  #home-showcase {
+    margin-top: 156px;
+    .container {
+      h1 {
+        width: 70%;
+        margin: 0 auto;
+      }
+    }
+  }
+
+  .grid {
+    grid-template-columns: 1fr !important;
+    grid-template-rows: repeat(3, 1fr);
+
+    .card {
+      max-width: 500px !important;
+
+      img {
+        height: 300px !important;
+      }
+    }
+  }
+
+  #why-choose {
+    .content {
+      flex-direction: column;
+      align-items: center;
+
+      .text {
+        width: 70%;
+        padding: 2rem;
+        text-align: center;
+      }
+    }
+  }
+}
+
+@media (max-width: 450px) {
+  #header-home {
+    padding-top: 1rem;
+  }
+
+  #main-nav {
+    padding: 0;
+  }
+
+  .nav-links {
+    // flex-direction: column !important;
+    text-align: center;
+
+    li {
+      padding: 0.5rem !important;
+    }
+  }
+
+  .phone {
+    margin: 0;
+    font-size: 0.8rem;
+  }
+
+  #home-showcase {
+    height: 500px;
+
+    h1 {
+      text-align: center;
+      font-size: 1.5rem !important;
+      width: 100% !important;
+    }
+  }
+
+  #services {
+    .title {
+      width: 100%;
+    }
+
+    img {
+      height: 200px !important;
+    }
+
+    .main-cta {
+      width: 100%;
+    }
+  }
+
+  #why-choose {
+    .text {
+      width: 100% !important;
+      padding: 2rem 0 !important;
+    }
+  }
+
+  #testimonial {
+    padding: 3rem 0;
+
+    .content {
+      width: 100%;
+      padding: 1.5rem;
+    }
+
+    .fas {
+      font-size: 2rem;
+      top: 4.5rem;
+    }
+  }
+
+  img {
+    height: 40px !important;
+  }
+
+  #main-footer {
+    .content {
+      flex-direction: column;
+      padding-bottom: 2rem;
+
+      .links {
+        width: 100%;
+      }
+
+      .social-links {
+        margin: 0 auto;
+        margin-top: 2rem;
+      }
+    }
+    .copy-right {
+      text-align: center;
+    }
+  }
+}

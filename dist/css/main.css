@@ -1,0 +1,333 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+body {
+  font-family: "Poppins", sans-serif; }
+
+.container {
+  max-width: 1366px;
+  padding: 0 1.5rem;
+  margin: auto;
+  overflow: hidden; }
+
+a {
+  text-decoration: none;
+  color: #333; }
+
+ul {
+  list-style: none; }
+
+#header-home {
+  width: 100%;
+  background: #fff;
+  position: fixed;
+  top: 0;
+  z-index: 4; }
+
+#main-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 0; }
+  #main-nav .main-logo h1,
+  #main-nav .main-logo h2 {
+    text-align: center;
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+    font-weight: 500;
+    text-transform: uppercase; }
+  #main-nav .main-logo h2 {
+    font-size: 1rem;
+    font-weight: 300;
+    margin-top: -5px;
+    letter-spacing: 0.2rem; }
+  #main-nav .nav-links {
+    display: flex;
+    font-size: 1rem; }
+    #main-nav .nav-links li {
+      padding: 1rem 1.5rem; }
+      #main-nav .nav-links li a {
+        position: relative;
+        padding-bottom: 0.3rem;
+        cursor: pointer; }
+      #main-nav .nav-links li a::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 2px;
+        background: #2e9cca;
+        transform: scaleX(0);
+        transform-origin: left;
+        transition: transform 250ms ease-in; }
+      #main-nav .nav-links li a:hover::after {
+        transform: scaleX(1); }
+
+.phone {
+  height: 100%;
+  padding: 0.3rem 0;
+  margin: auto 0;
+  font-weight: 500; }
+  .phone .fas {
+    color: #2e9cca; }
+
+#home-showcase {
+  background: url("/dist/img/showcase_img.jpg") no-repeat center center/cover;
+  width: 100%;
+  height: 700px;
+  position: relative;
+  margin-top: 81px;
+  z-index: 3; }
+  #home-showcase .overlay {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, 0.8);
+    z-index: 1; }
+  #home-showcase .container {
+    display: flex;
+    align-items: center;
+    height: 100%; }
+    #home-showcase .container h1 {
+      font-size: 2.5rem;
+      z-index: 2;
+      width: 45%; }
+
+#services {
+  background: #f4f4f4;
+  padding: 2rem 0; }
+  #services .title {
+    border-bottom: 2px solid #e8e8e8;
+    width: 50%;
+    margin: 0 auto;
+    padding-bottom: 1rem; }
+    #services .title h2,
+    #services .title p {
+      text-align: center; }
+  #services .grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 2rem;
+    margin-top: 1.5rem; }
+    #services .grid .card {
+      display: flex;
+      justify-content: space-between;
+      flex-direction: column;
+      background: #fff;
+      margin: 0 auto;
+      padding: 1rem;
+      max-width: 350px; }
+      #services .grid .card .content img {
+        width: 100%;
+        height: 225px;
+        object-fit: cover;
+        object-position: bottom; }
+      #services .grid .card .content p {
+        margin-top: 0.5em; }
+    #services .grid .btn {
+      display: inline-block;
+      color: #2e9cca;
+      font-weight: 600;
+      font-size: 0.8rem;
+      margin-top: 1.5rem;
+      text-align: center;
+      padding: 0.3rem 1.5rem;
+      border: 2px solid #2e9cca;
+      border-radius: 10px; }
+      #services .grid .btn:hover {
+        color: #fff;
+        background-color: #2e9cca;
+        transition: all 100ms ease-in; }
+  #services .main-cta {
+    text-align: center;
+    padding-top: 1rem;
+    margin: 2rem auto;
+    border-top: 2px solid #e8e8e8;
+    width: 50%; }
+    #services .main-cta h3 {
+      margin-bottom: 1rem; }
+    #services .main-cta .btn {
+      background-color: #2e9cca;
+      border-radius: 10px;
+      color: #fff;
+      padding: 0.5rem 2rem; }
+      #services .main-cta .btn:hover {
+        background-color: #fff;
+        color: #2e9cca;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        transition: all 50ms ease-in; }
+
+.parallax {
+  height: 300px;
+  width: 100%;
+  background-image: url("../img/cables-close-up-connection-257736.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  opacity: 0.4; }
+
+#why-choose {
+  background: #f4f4f4;
+  padding-top: 2rem; }
+  #why-choose .title {
+    text-align: center; }
+  #why-choose .content {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    margin: 1rem 0; }
+    #why-choose .content .text {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      width: 33%;
+      margin: 0 2rem;
+      padding: 1rem; }
+      #why-choose .content .text .fas {
+        text-align: center;
+        margin-bottom: 1rem;
+        padding-bottom: 1rem;
+        border-bottom: #2e9cca solid 2px;
+        width: 100%; }
+      #why-choose .content .text p {
+        opacity: 0.75; }
+
+#testimonial {
+  background-color: #f4f4f4;
+  padding: 4rem; }
+  #testimonial .content {
+    width: 500px;
+    background: #fff;
+    margin: 0 auto;
+    padding: 2rem;
+    border-top: 2px solid #2e9cca;
+    position: relative; }
+    #testimonial .content .title {
+      text-align: center; }
+      #testimonial .content .title p {
+        opacity: 0.75; }
+  #testimonial .fas {
+    position: absolute;
+    top: 3.5rem;
+    opacity: 0.1; }
+  #testimonial .text {
+    margin-top: 1.25rem; }
+  #testimonial .name {
+    margin-top: 1rem;
+    opacity: 0.75; }
+    #testimonial .name span {
+      font-weight: 600; }
+
+#achivements {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1.5rem; }
+  #achivements img {
+    margin: 0 2rem;
+    height: 75px; }
+
+#main-footer {
+  background: #f4f4f4;
+  padding-bottom: 1rem; }
+  #main-footer .container {
+    position: relative; }
+  #main-footer .content {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 2rem;
+    padding-bottom: 3rem; }
+    #main-footer .content .links {
+      width: 400px; }
+      #main-footer .content .links .footer-links {
+        display: flex;
+        justify-content: space-between; }
+  #main-footer .social-links {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 125px; }
+    #main-footer .social-links i {
+      font-size: 1.5rem; }
+
+/* Portrait */
+@media (max-width: 1024px) {
+  #header-home {
+    padding: 0.5rem 0; }
+  #main-nav {
+    flex-direction: column; }
+    #main-nav .main-logo {
+      margin-bottom: 1rem; }
+  #home-showcase {
+    margin-top: 156px; }
+    #home-showcase .container h1 {
+      width: 70%;
+      margin: 0 auto; }
+  .grid {
+    grid-template-columns: 1fr !important;
+    grid-template-rows: repeat(3, 1fr); }
+    .grid .card {
+      max-width: 500px !important; }
+      .grid .card img {
+        height: 300px !important; }
+  #why-choose .content {
+    flex-direction: column;
+    align-items: center; }
+    #why-choose .content .text {
+      width: 70%;
+      padding: 2rem;
+      text-align: center; } }
+
+@media (max-width: 450px) {
+  #header-home {
+    padding-top: 1rem; }
+  #main-nav {
+    padding: 0; }
+  .nav-links {
+    text-align: center; }
+    .nav-links li {
+      padding: 0.5rem !important; }
+  .phone {
+    margin: 0;
+    font-size: 0.8rem; }
+  #home-showcase {
+    height: 500px; }
+    #home-showcase h1 {
+      text-align: center;
+      font-size: 1.5rem !important;
+      width: 100% !important; }
+  #services .title {
+    width: 100%; }
+  #services img {
+    height: 200px !important; }
+  #services .main-cta {
+    width: 100%; }
+  #why-choose .text {
+    width: 100% !important;
+    padding: 2rem 0 !important; }
+  #testimonial {
+    padding: 3rem 0; }
+    #testimonial .content {
+      width: 100%;
+      padding: 1.5rem; }
+    #testimonial .fas {
+      font-size: 2rem;
+      top: 4.5rem; }
+  img {
+    height: 40px !important; }
+  #main-footer .content {
+    flex-direction: column;
+    padding-bottom: 2rem; }
+    #main-footer .content .links {
+      width: 100%; }
+    #main-footer .content .social-links {
+      margin: 0 auto;
+      margin-top: 2rem; }
+  #main-footer .copy-right {
+    text-align: center; } }

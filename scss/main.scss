@@ -1,0 +1,404 @@
+$main-color: #2e9cca;
+$secondary-color: #8ee4af;
+$bg-color: #f4f4f4;
+
+//  Resets
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  // border: 1px solid red;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+// Width Container
+.container {
+  max-width: 1366px;
+  padding: 0 1.5rem;
+  margin: auto;
+  overflow: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: #333;
+}
+
+ul {
+  list-style: none;
+}
+
+// Navbar bacgkround
+#header-home {
+  width: 100%;
+  background: #fff;
+  position: fixed;
+  top: 0;
+  z-index: 4;
+}
+
+// Navbar flex container
+#main-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 0;
+
+  // logo Container
+  .main-logo {
+    h1,
+    h2 {
+      text-align: center;
+      font-size: 1.5rem;
+      line-height: 1.5rem;
+      font-weight: 500;
+      text-transform: uppercase;
+    }
+
+    h2 {
+      font-size: 1rem;
+      font-weight: 300;
+      margin-top: -5px;
+      letter-spacing: 0.2rem;
+    }
+  }
+
+  // links flex Container
+  .nav-links {
+    display: flex;
+    font-size: 1rem;
+
+    li {
+      padding: 1rem 1.5rem;
+
+      a {
+        position: relative;
+        padding-bottom: 0.3rem;
+        cursor: pointer;
+      }
+
+      // Links hover effect
+      a::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 2px;
+        background: $main-color;
+
+        transform: scaleX(0);
+        transform-origin: left;
+        transition: transform 250ms ease-in;
+      }
+
+      a:hover::after {
+        transform: scaleX(1);
+      }
+    }
+  }
+}
+
+// Phone number
+.phone {
+  height: 100%;
+  padding: 0.3rem 0;
+  margin: auto 0;
+  font-weight: 500;
+
+  // Phone Icon
+  .fas {
+    color: $main-color;
+  }
+}
+
+// Landing page Hero
+#home-showcase {
+  background: url("/dist/img/showcase_img.jpg") no-repeat center center/cover;
+  width: 100%;
+  height: 700px;
+  position: relative;
+  margin-top: 81px;
+  z-index: 3;
+
+  // Image Overlay
+  .overlay {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, 0.8);
+    z-index: 1;
+  }
+
+  // Showcase Heading Conatiner
+  .container {
+    display: flex;
+    align-items: center;
+    height: 100%;
+
+    h1 {
+      font-size: 2.5rem;
+      z-index: 2;
+      width: 45%;
+    }
+  }
+}
+
+// Services
+#services {
+  background: $bg-color;
+  padding: 2rem 0;
+
+  // Services main heading
+  .title {
+    border-bottom: 2px solid #e8e8e8;
+    width: 50%;
+    margin: 0 auto;
+    padding-bottom: 1rem;
+
+    h2,
+    p {
+      text-align: center;
+    }
+  }
+
+  // Grid Container for Cards
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 2rem;
+    margin-top: 1.5rem;
+
+    .card {
+      display: flex;
+      justify-content: space-between;
+      flex-direction: column;
+      background: #fff;
+      margin: 0 auto;
+      padding: 1rem;
+      max-width: 350px;
+
+      .content {
+        img {
+          width: 100%;
+          height: 225px;
+          object-fit: cover;
+          object-position: bottom;
+        }
+
+        p {
+          margin-top: 0.5em;
+        }
+      }
+    }
+
+    // Card CTA
+    .btn {
+      display: inline-block;
+      color: $main-color;
+      font-weight: 600;
+      font-size: 0.8rem;
+      margin-top: 1.5rem;
+      text-align: center;
+      padding: 0.3rem 1.5rem;
+      border: 2px solid $main-color;
+      border-radius: 10px;
+
+      // Card CTA Hover effect
+      &:hover {
+        color: #fff;
+        background-color: $main-color;
+        transition: all 100ms ease-in;
+      }
+    }
+  }
+
+  // Under Card CTA
+  .main-cta {
+    text-align: center;
+    padding-top: 1rem;
+    margin: 2rem auto;
+    border-top: 2px solid #e8e8e8;
+    width: 50%;
+
+    h3 {
+      margin-bottom: 1rem;
+    }
+
+    .btn {
+      background-color: $main-color;
+      border-radius: 10px;
+      color: #fff;
+      padding: 0.5rem 2rem;
+
+      // Hover effect
+      &:hover {
+        background-color: #fff;
+        color: $main-color;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        transition: all 50ms ease-in;
+      }
+    }
+  }
+}
+
+// Image of wires
+.parallax {
+  height: 300px;
+  width: 100%;
+  background-image: url("../img/cables-close-up-connection-257736.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  opacity: 0.4;
+}
+
+// Section: Why Choose Us
+#why-choose {
+  background: $bg-color;
+  padding-top: 2rem;
+
+  // Why Choose Us
+  .title {
+    text-align: center;
+  }
+
+  // Content Wrapper
+  .content {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    margin: 1rem 0;
+
+    // Content Child elements
+    .text {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      width: 33%;
+      margin: 0 2rem;
+      padding: 1rem;
+
+      // Icons
+      .fas {
+        text-align: center;
+        margin-bottom: 1rem;
+        padding-bottom: 1rem;
+        border-bottom: $main-color solid 2px;
+        width: 100%;
+      }
+
+      // Text
+      p {
+        opacity: 0.75;
+      }
+    }
+  }
+}
+
+// Testimonials
+#testimonial {
+  background-color: $bg-color;
+  padding: 4rem;
+
+  // Content container
+  .content {
+    width: 500px;
+    background: #fff;
+    margin: 0 auto;
+    padding: 2rem;
+    border-top: 2px solid $main-color;
+    position: relative;
+
+    // Heading
+    .title {
+      text-align: center;
+
+      // Sub heading text
+      p {
+        opacity: 0.75;
+      }
+    }
+  }
+
+  // Quote icon
+  .fas {
+    position: absolute;
+    top: 3.5rem;
+    opacity: 0.1;
+  }
+
+  // Testimonial text
+  .text {
+    margin-top: 1.25rem;
+  }
+
+  // Persons name
+  .name {
+    margin-top: 1rem;
+    opacity: 0.75;
+
+    // City
+    span {
+      font-weight: 600;
+    }
+  }
+}
+
+// Flex Container for logos
+#achivements {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1.5rem;
+
+  img {
+    margin: 0 2rem;
+    height: 75px;
+  }
+}
+
+// Footer
+#main-footer {
+  background: $bg-color;
+  padding-bottom: 1rem;
+
+  .container {
+    position: relative;
+  }
+
+  .content {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 2rem;
+    padding-bottom: 3rem;
+
+    .links {
+      width: 400px;
+
+      .footer-links {
+        display: flex;
+        justify-content: space-between;
+      }
+    }
+  }
+
+  .social-links {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 125px;
+
+    i {
+      font-size: 1.5rem;
+    }
+  }
+}
+
+@import "media";
